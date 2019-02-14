@@ -1,0 +1,28 @@
+{% load static %}
+
+<head>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/home.css' %}" rel="stylesheet">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+
+<body>
+    <div class="container-fluid blue ">
+        <div class="row  ">
+            <div class="col4 blue">
+                <nav class="navbar navbar-expand-sm bg-light blue">
+                    <ul class="navbar-nav blue">
+                        <li class="nav-item ">
+                            <a class="nav-link white" href="{% url 'home' %}">Toko Online</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link white" href="">Home</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+{% block content %}
+{% endblock %}

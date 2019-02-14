@@ -1,0 +1,26 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid padtop50">
+    <div class="row">
+        <a class="btn btn-primary marginx" href="{% url 'input_home' %}">BUAT POST BARU</a>
+    </div>
+</div>
+{% for isi in isihome %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <img src="{{isi.images}}" class="w400h350" alt=""><br>
+
+        </div>
+    </div>
+    <div class="row">
+        <ul>
+            <li class="bold">{{isi.nama}}</li>
+            <Li>{{isi.harga}}</Li>
+            <li><a href="{% url 'post_detail' post_id=isi.id %}"><span class="blu">Lihat detail...</span></a></li>
+        </ul>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

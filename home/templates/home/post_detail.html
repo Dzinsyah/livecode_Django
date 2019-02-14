@@ -1,0 +1,20 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row marginx">
+              <img src="{{post.images}}" class=" marginx w400h350" alt=""><br>
+    </div>
+    <div class="row marginx padding500">
+        <ul>
+            <li class="bold">{{post.nama}}</li>
+            <Li>{{post.harga}}</Li>
+            <li>{{post.deskripsi1}}</li>
+            <li>{{post.deskripsi2}}</li>
+            <li>{{post.deskripsi3}}</li>
+            <li>{{post.deskripsi4}}</li>
+            <li>{{post.deskripsi5}}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
